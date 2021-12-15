@@ -65,19 +65,27 @@ b:Label("KeyBind V",{
     
 })
 
-b:Button("Anti Furry",function()
+b:Button("Anti Furry On",function()
     _G.on = true
 while _G.on do wait()
     pcall(function()
     if game.Players.LocalPlayer.PlayerGui.Overlay.Enabled == true then
-    pos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(6.2)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos) + Vector3.new(0,3,0)
+LP = game:GetService('Players').LocalPlayer
 
+prev = LP.Character:WaitForChild('HumanoidRootPart').CFrame --holds old CFrame string
+LP.Character.Parent = workspace.Terrain --removes character from workspace lol
+
+game:GetService("ReplicatedStorage").Remote.ResetCharacter:FireServer(game.Players.LocalPlayer.Name)
+ --breaks character joints
+game:GetService('Workspace'):WaitForChild(LP.Name) --waits for character to be re-added to workspace
+LP.Character:WaitForChild('HumanoidRootPart').CFrame = prev -- returns back to previous spot
 end
 end)
 end
+end)
+
+b:Button("Anti Furry Off",function()
+    _G.on = false
 end)
 
 b:Button("Anti Cum Puddles 2",function()
