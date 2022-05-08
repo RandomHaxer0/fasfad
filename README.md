@@ -413,14 +413,128 @@ b:Toggle("No Miss",function(bool9)
        if bool9 then
            _G.nomiss = true
            notif("No Miss On")
+           
+                      for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                if v:IsA("Tool") then
+                   if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1 then
+                        
+                        local nofucky = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1
+                        
+                        nofucky.animSpeed = math.huge
+                        
+                        end
+                        
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2 then
+                            
+                        local nofucky2 = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2
+                        
+                        nofucky2.animSpeed = math.huge
+                        
+                        end                            
+                          
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3 then
+                        
+                        local nofucky3 = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3
+                        
+                        nofucky3.animSpeed = math.huge
+                        
+                        end 
+                    end
+                end
+                    
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                if v:IsA("Tool") then
+                     if require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1 then
+                        
+                        local nofucky = require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1
+                        
+                        nofucky.animSpeed = math.huge
+                        
+                        end
+                        
+                        if require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2 then
+                            
+                        local nofucky2 = require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2
+                        
+                        nofucky2.animSpeed = math.huge
+                        
+                        end                            
+                          
+                        if require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3 then
+                        
+                        local nofucky3 = require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3
+                        
+                        nofucky3.animSpeed = math.huge
+                        
+                        end                    
+                    end 
+                end
+           
        else
             _G.nomiss = false
             notif("No Miss Off")
+            
+            for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                if v:IsA("Tool") then
+                   if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1 then
+                        
+                        local nofucky = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1
+                        
+                        nofucky.animSpeed = 1
+                        
+                        end
+                        
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2 then
+                            
+                        local nofucky2 = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2
+                        
+                        nofucky2.animSpeed = 1
+                        
+                        end                            
+                          
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3 then
+                        
+                        local nofucky3 = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3
+                        
+                        nofucky3.animSpeed = 1
+                        
+                        end 
+                    end
+                end
+                    
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                if v:IsA("Tool") then
+                     if require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1 then
+                        
+                        local nofucky = require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1
+                        
+                        nofucky.animSpeed = 1
+                        
+                        end
+                        
+                        if require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2 then
+                            
+                        local nofucky2 = require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2
+                        
+                        nofucky2.animSpeed = 1
+                        
+                        end                            
+                          
+                        if require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3 then
+                        
+                        local nofucky3 = require(game.Players.LocalPlayer.Backpack:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3
+                        
+                        nofucky3.animSpeed = 1
+                        
+                        end                    
+                    end 
+                end
+            
+            
        end
     
         
     -- ty MojaveMF#2577 for the sussy ball :0
-    _G.nomiss = true
     
     if workspace:FindFirstChild("Part") then
         workspace:FindFirstChild("Part"):Destroy()
@@ -453,46 +567,84 @@ c.Size = Vector3.new(radius,radius,radius)
             if hit.Parent.Humanoid.Health == 0 then
                 
           else
-            repeat
-                task.wait()
+            local stepped
+            stepped = game:GetService("RunService").RenderStepped:Connect(function()
                     if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
+                        
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1 then
+                        
+                        local nofucky = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1
+                        
+                        nofucky.animSpeed = math.huge
+                        
+                        end
+                        
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2 then
+                            
+                        local nofucky2 = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S2
+                        
+                        nofucky2.animSpeed = math.huge
+                        
+                        end                            
+                          
+                        if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3 then
+                        
+                        local nofucky3 = require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S3
+                        
+                        nofucky3.animSpeed = math.huge
+                        
+                        end                            
+                        
                         if game.Players.LocalPlayer.Character:FindFirstChild("katana") then
                             game.Players.LocalPlayer.Character:FindFirstChild("katana"):FindFirstChild("katanaHandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("katana"):FindFirstChild("katanaHandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("katana") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("fireAxe") then
                             game.Players.LocalPlayer.Character:FindFirstChild("fireAxe"):FindFirstChild("wood").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("fireAxe"):FindFirstChild("wood").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("fireAxe") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("longsword") then
                             game.Players.LocalPlayer.Character:FindFirstChild("longsword"):FindFirstChild("longhandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("longsword"):FindFirstChild("longhandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("longsword") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("baseballBat") then
                             game.Players.LocalPlayer.Character:FindFirstChild("baseballBat"):FindFirstChild("baseballBat").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("baseballBat") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("fists")then
-                            game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("fists"):FindFirstChild("Left").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
-                            game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("fists"):FindFirstChild("Right").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("fists"):FindFirstChild("Left").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("fists"):FindFirstChild("Right").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("fists"):FindFirstChild("Left").CanCollide = false
+                            game.Players.LocalPlayer.Character:FindFirstChild("fists"):FindFirstChild("Right").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("fists") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("fryingPan") then
                             game.Players.LocalPlayer.Character:FindFirstChild("fryingPan"):FindFirstChild("fryingPanHandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("fryingPan"):FindFirstChild("fryingPanHandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("fryingPan") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("shovel") then
                             game.Players.LocalPlayer.Character:FindFirstChild("shovel"):FindFirstChild("shovelHandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("shovel"):FindFirstChild("shovelHandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("shovel") then  
                         if game.Players.LocalPlayer.Character:FindFirstChild("armingsword") then
                             game.Players.LocalPlayer.Character:FindFirstChild("armingsword"):FindFirstChild("armingshandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
                             game.Players.LocalPlayer.Character:FindFirstChild("armingsword"):FindFirstChild("snailshield").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("armingsword"):FindFirstChild("armingshandle").CanCollide = false
+                            game.Players.LocalPlayer.Character:FindFirstChild("armingsword"):FindFirstChild("snailshield").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("armingsword") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("spear") then
                             game.Players.LocalPlayer.Character:FindFirstChild("spear"):FindFirstChild("spearHandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("spear"):FindFirstChild("spearHandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("spear") then
                         if game.Players.LocalPlayer.Character:FindFirstChild("crowbar") then
                             game.Players.LocalPlayer.Character:FindFirstChild("crowbar"):FindFirstChild("shovelHandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("crowbar"):FindFirstChild("shovelHandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("crowbar") then 
                         if game.Players.LocalPlayer.Character:FindFirstChild("cleaver") then
                             game.Players.LocalPlayer.Character:FindFirstChild("cleaver"):FindFirstChild("cleaverHandle").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("cleaver"):FindFirstChild("cleaverHandle").CanCollide = false
                         elseif not game.Players.LocalPlayer.Character:FindFirstChild("cleaver") then
-                        if game.Players.LocalPlayer.Character:FindFirstChild("knife").Name == "knife" then
+                        if game.Players.LocalPlayer.Character:FindFirstChild("knife") then
                             game.Players.LocalPlayer.Character:FindFirstChild("knife"):FindFirstChild("london").Position = hit.Parent:WaitForChild("HumanoidRootPart").Position
+                            game.Players.LocalPlayer.Character:FindFirstChild("knife"):FindFirstChild("london").CanCollide = false
                         end
                         end
                         end
@@ -508,7 +660,10 @@ c.Size = Vector3.new(radius,radius,radius)
                         end
                             
                             
-            until hit.Parent.Humanoid.Died or wait(3)
+            if hit.Parent.Humanoid.Died or wait(3) then
+                stepped:Disconnect()
+            end
+            end)
             end
         end
     
