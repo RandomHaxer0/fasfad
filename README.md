@@ -26,6 +26,8 @@ greatsword
 chainsaw
 spear
 shovel
+metalBat
+sledgehammer
 
 There are more but im not sure what their name is since i never got to see their atcual name
 
@@ -719,7 +721,7 @@ b:Box("Salvage All Except","string",function(item)
     
     else    
     
-    if item == "baseballBat" or item == "fireAxe" or item == "greatsword" or item == "chainsaw" or item == "spear" or item == "cleaver" or item == "fryingPan" or item == "armingsword" or item == "fists" or item == "rapier" or item == "knife" or item == "crowbar" or item == "yoyo" or item == "shovel" or item == "longsword" then
+    if item == "sledgehammer" or item == "metalBat" or item == "baseballBat" or item == "fireAxe" or item == "greatsword" or item == "chainsaw" or item == "spear" or item == "cleaver" or item == "fryingPan" or item == "armingsword" or item == "fists" or item == "rapier" or item == "knife" or item == "crowbar" or item == "yoyo" or item == "shovel" or item == "longsword" then
 
     for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
         if v:IsA("Tool") then
