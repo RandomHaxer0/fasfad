@@ -568,7 +568,7 @@ c.Size = Vector3.new(radius,radius,radius)
                 
           else
             local stepped
-            stepped = game:GetService("RunService").RenderStepped:Connect(function()
+            stepped = game:GetService("RunService").Heartbeat:Connect(function()
                     if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
                         
                         if require(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):FindFirstChild("stat")).S1 then
