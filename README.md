@@ -56,6 +56,7 @@ end
 local w = library:CreateWindow("Madness combat game idfk haha poo") -- Creates the window
 
 local b = w:CreateFolder("Main")
+local v = w:CreateFolder("Parry Config")
 
 b:Label("",{
     TextSize = 25; -- Self Explaining
@@ -65,168 +66,22 @@ b:Label("",{
 })
 
 b:Toggle("RageMode Auto-Parry",function(bool)
-    spawn(function()
-        if bool then
-            _G.ragemodeparry = true
+     spawn(function()
+        if bool3 then
+            _G.ragemodeautoparry = true
             notif("RageMode Auto-Parry On")
         else
-            _G.ragemodeparry = false
+            _G.ragemodeautoparry = false
             notif("RageMode Auto-Parry Off")
         end
 
-while _G.ragemodeparry do wait()
-    pcall(function()
-    for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
-        
-        local weapon5 = nil
-        
-        if v.Name == "canAttack" and v.Value == false then
-            
-            if v:FindFirstChild("iallreadytriedtoblockyoassbitch") then
-                repeat wait() until v.Value == true
-                v:FindFirstChild("iallreadytriedtoblockyoassbitch"):Destroy()
-            else 
-
-        local reqwepfromman = require(v.Parent.Parent.stat).S1
-        
-        if reqwepfromman.blockBreak == 4 then
-            
-        else    
-  
-        if v.Parent.Parent.Parent:IsA("Model") and v.Parent.Parent.Parent.Humanoid then
-            if v.Parent.Parent.Parent.Name == game.Players.LocalPlayer.Character.Name then
-                
-            else    
-        
-        
-    local lp = game.Players.LocalPlayer
-    local character = v.Parent.Parent.Parent
-    local charactername = v.Parent.Parent.Parent.Name
-    
-        
-        if (lp.Character and lp.Character:FindFirstChild("Head") and character:FindFirstChild("Head")) then
-            local mag = (character.Head.Position - lp.Character.Head.Position).Magnitude
-                  if mag < 13  then
-                      
-        if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
-            weapon5 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
-        end
-        
-wait(0.01)
-local ohString1 = "Block"
-local ohBoolean2 = true
-
-weapon5.Start:FireServer(ohString1, ohBoolean2)
-local a = Instance.new("BoolValue",v)
-a.Name = "iallreadytriedtoblockyoassbitch"
-task.wait(1.3)
-end
-end
-end
-end
-end
-end
-end
-end
-end)
-end
-end)
-end)
-
-b:Toggle("Kinda Legit Auto-Parry",function(bool2)
-        spawn(function()
-        if bool2 then
-            _G.kindalegitautoparry = true
-            notif("Kinda Legit Auto-Parry On")
-        else
-            _G.kindalegitautoparry = false
-            notif("Kinda Legit Auto-Parry Off")
-        end
-    
-    while _G.kindalegitautoparry do task.wait()
-    pcall(function()
-    for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
-        
-        local weapon4 = nil
-        
-        if v.Name == "canAttack" and v.Value == false then
-            
-            if v:FindFirstChild("iallreadytriedtoblockyoassbitch") then
-                repeat wait() until v.Value == true
-                v:FindFirstChild("iallreadytriedtoblockyoassbitch"):Destroy()
-            else  
-            
-        local reqwepfromman = require(v.Parent.Parent.stat).S1
-        
-        if reqwepfromman.blockBreak == 4 then
-            
-        else 
-            
-        if v.Parent.Parent.Parent:IsA("Model") and v.Parent.Parent.Parent.Humanoid then
-            if v.Parent.Parent.Parent.Name == game.Players.LocalPlayer.Character.Name then
-                
-            else    
-        
-        
-    local lp = game.Players.LocalPlayer
-    local character = v.Parent.Parent.Parent
-    local charactername = v.Parent.Parent.Parent.Name
-    
-        
-        if (lp.Character and lp.Character:FindFirstChild("Head") and character:FindFirstChild("Head")) then
-            local mag = (character.Head.Position - lp.Character.Head.Position).Magnitude
-                  if mag < 13  then
-                      
-        if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
-            weapon4 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
-        end    
-        
-wait(0.01)        
-local ohString1 = "Block"
-local ohBoolean2 = true
-
-weapon4.Start:FireServer(ohString1, ohBoolean2)
-keypress(0x51)
-local a = Instance.new("BoolValue",v)
-a.Name = "iallreadytriedtoblockyoassbitch"
-task.wait(1.4)
-keyrelease(0x51)
-task.wait(1.5)
-end
-end
-end
-end
-end
-end
-end
-end
-end)
-end
-end)
-end)
-
-b:Toggle("Legit Auto-Parry",function(bool3)
-     spawn(function()
-        if bool3 then
-            _G.legitautoparry = true
-            notif("Legit Auto-Parry On")
-        else
-            _G.legitautoparry = false
-            notif("Legit Auto-Parry Off")
-        end
-
-while _G.legitautoparry do task.wait()
-    pcall(function()
+while _G.ragemodeautoparry do task.wait()
+pcall(function()
     for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
         
         local weapon3 = nil
         
         if v.Name == "canAttack" and v.Value == false then
-            
-            if v:FindFirstChild("iallreadytriedtoblockyoassbitch") then
-                repeat wait() until v.Value == true
-                v:FindFirstChild("iallreadytriedtoblockyoassbitch"):Destroy()
-            else    
             
         local reqwepfromman = require(v.Parent.Parent.stat).S1
         
@@ -253,6 +108,158 @@ while _G.legitautoparry do task.wait()
             weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
         end    
         
+        if weapon3.values.canAttack.Value == false then
+        
+        else    
+        
+        
+wait(0.01)        
+local ohString1 = "Block"
+local ohBoolean2 = true
+
+weapon3.Start:FireServer(ohString1, ohBoolean2)
+task.wait(0.2)
+    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
+        task.wait(_G.ragehittime)
+    else
+        task.wait(_G.ragemisstime)
+    end
+end
+end    
+end
+end
+end
+end
+end
+end
+end)
+end
+end)
+end)
+
+b:Toggle("Kinda-Legit Auto-Parry",function(bool2)
+     spawn(function()
+        if bool3 then
+            _G.kindalegitautoparry = true
+            notif("Kinda-Legit Auto-Parry On")
+        else
+            _G.kindalegitautoparry = false
+            notif("Kinda-Legit Auto-Parry Off")
+        end
+
+while _G.kindalegitautoparry do task.wait()
+pcall(function()
+    for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
+        
+        local weapon3 = nil
+        
+        if v.Name == "canAttack" and v.Value == false then
+            
+        local reqwepfromman = require(v.Parent.Parent.stat).S1
+        
+        if reqwepfromman.blockBreak == 4 then
+            
+        else
+            
+        if v.Parent.Parent.Parent:IsA("Model") and v.Parent.Parent.Parent.Humanoid then
+            if v.Parent.Parent.Parent.Name == game.Players.LocalPlayer.Character.Name then
+                
+            else    
+        
+        
+    local lp = game.Players.LocalPlayer
+    local character = v.Parent.Parent.Parent
+    local charactername = v.Parent.Parent.Parent.Name
+    
+        
+        if (lp.Character and lp.Character:FindFirstChild("Head") and character:FindFirstChild("Head")) then
+            local mag = (character.Head.Position - lp.Character.Head.Position).Magnitude
+                  if mag < 13  then
+                      
+        if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
+            weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+        end    
+        
+        if weapon3.values.canAttack.Value == false then
+        
+        else    
+        
+        
+wait(0.01)        
+local ohString1 = "Block"
+local ohBoolean2 = true
+
+weapon3.Start:FireServer(ohString1, ohBoolean2)
+keypress(0x51)  
+task.wait(0.2)
+
+    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
+        keyrelease(0x51)
+        task.wait(_G.kindalegithittime)
+    else
+        keyrelease(0x51)
+        task.wait(_G.kindalegitmisstime)
+    end
+end
+end    
+end
+end
+end
+end
+end
+end
+end)
+end
+end)
+end)
+
+b:Toggle("Legit Auto-Parry",function(bool3)
+     spawn(function()
+        if bool3 then
+            _G.legitautoparry = true
+            notif("Legit Auto-Parry On")
+        else
+            _G.legitautoparry = false
+            notif("Legit Auto-Parry Off")
+        end
+
+while _G.legitautoparry do task.wait()
+pcall(function()
+    for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
+        
+        local weapon3 = nil
+        
+        if v.Name == "canAttack" and v.Value == false then
+            
+        local reqwepfromman = require(v.Parent.Parent.stat).S1
+        
+        if reqwepfromman.blockBreak == 4 then
+            
+        else
+            
+        if v.Parent.Parent.Parent:IsA("Model") and v.Parent.Parent.Parent.Humanoid then
+            if v.Parent.Parent.Parent.Name == game.Players.LocalPlayer.Character.Name then
+                
+            else    
+        
+        
+    local lp = game.Players.LocalPlayer
+    local character = v.Parent.Parent.Parent
+    local charactername = v.Parent.Parent.Parent.Name
+    
+        
+        if (lp.Character and lp.Character:FindFirstChild("Head") and character:FindFirstChild("Head")) then
+            local mag = (character.Head.Position - lp.Character.Head.Position).Magnitude
+                  if mag < 13  then
+                      
+        if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
+            weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+        end    
+        
+        if weapon3.values.canAttack.Value == false then
+        
+        else    
+            
         local fucker = math.random(1,2)
         
         if fucker == 1 then
@@ -263,14 +270,18 @@ local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
 keypress(0x51)  
-local a = Instance.new("BoolValue",v)
-a.Name = "iallreadytriedtoblockyoassbitch"
-task.wait(1.4)
-keyrelease(0x51)
+task.wait(0.2)
+    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
+        keyrelease(0x51)
+        task.wait(_G.legithittime)
+    else
+        keyrelease(0x51)
+        task.wait(_G.legitmisstime)
+    end
 else
 
 end    
-end
+end    
 end
 end
 end
@@ -738,6 +749,24 @@ end)
 end)
 end)
 
+b:Toggle("Auto Respawn",function(bool10)
+    spawn(function()
+        if bool10 then
+            _G.autorespawn = true
+            notif("Auto Respawn On")
+        else
+            _G.autorespawn = false
+            notif("Auto Respawn Off")
+        end
+
+while _G.autorespawn do task.wait()
+    pcall(function()
+        game:GetService("ReplicatedStorage").events.respawnRequest:InvokeServer()
+    end)
+end
+end)
+end)
+
 b:Box("Salvage All Except","string",function(item)
     
     if item == "" then 
@@ -819,3 +848,53 @@ b:Button("List Of Items",function()
     s("There are more but im not sure what their name is since i never got to see their atcual name")
     notif("Press F9 To Check Console (Where The Items Were Printed Out)")
 end)    
+
+v:Slider("RageMode Miss Time",{
+    min = 0.50;
+    max = 1;
+    precise = true;
+},function(value)
+    _G.ragemisstime = value
+end)
+
+v:Slider("RageMode Hit Time",{
+    min = 1.3;
+    max = 2;
+    precise = true;
+},function(value)
+    _G.ragehittime = value
+end)
+
+v:Slider("Kinda-Legit Miss Time",{
+    min = 0.50;
+    max = 1;
+    precise = true;
+},function(value)
+    _G.kindalegitmisstime = value
+end)
+
+v:Slider("Kinda-Legit Hit Time",{
+    min = 1.3;
+    max = 2;
+    precise = true;
+},function(value)
+    _G.kindalegithittime = value
+end)
+
+v:Slider("Legit Miss Time",{
+    min = 0.50;
+    max = 1;
+    precise = true;
+},function(value)
+    _G.legitmisstime = value
+end)
+
+v:Slider("Legit Hit Time",{
+    min = 1.3;
+    max = 2;
+    precise = true;
+},function(value)
+    _G.legithittime = value
+end)
+
+notif("Added Parry Config Tab, Reworked Auto Parry (Should work atleast 35% better now), Auto Respawn")
