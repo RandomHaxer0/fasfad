@@ -81,6 +81,11 @@ while _G.ragemodeparry do wait()
         local weapon5 = nil
         
         if v.Name == "canAttack" and v.Value == false then
+            
+            if v:FindFirstChild("iallreadytriedtoblockyoassbitch") then
+                repeat wait() until v.Value == true
+                v:FindFirstChild("iallreadytriedtoblockyoassbitch"):Destroy()
+            else 
 
         local reqwepfromman = require(v.Parent.Parent.stat).S1
         
@@ -112,7 +117,10 @@ local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon5.Start:FireServer(ohString1, ohBoolean2)
-task.wait(1)
+local a = Instance.new("BoolValue",v)
+a.Name = "iallreadytriedtoblockyoassbitch"
+task.wait(1.3)
+end
 end
 end
 end
@@ -142,6 +150,11 @@ b:Toggle("Kinda Legit Auto-Parry",function(bool2)
         local weapon4 = nil
         
         if v.Name == "canAttack" and v.Value == false then
+            
+            if v:FindFirstChild("iallreadytriedtoblockyoassbitch") then
+                repeat wait() until v.Value == true
+                v:FindFirstChild("iallreadytriedtoblockyoassbitch"):Destroy()
+            else  
             
         local reqwepfromman = require(v.Parent.Parent.stat).S1
         
@@ -173,10 +186,13 @@ local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon4.Start:FireServer(ohString1, ohBoolean2)
-keypress(0x51)  
-task.wait()
+keypress(0x51)
+local a = Instance.new("BoolValue",v)
+a.Name = "iallreadytriedtoblockyoassbitch"
+task.wait(1.4)
 keyrelease(0x51)
 task.wait(1.5)
+end
 end
 end
 end
@@ -207,11 +223,16 @@ while _G.legitautoparry do task.wait()
         
         if v.Name == "canAttack" and v.Value == false then
             
+            if v:FindFirstChild("iallreadytriedtoblockyoassbitch") then
+                repeat wait() until v.Value == true
+                v:FindFirstChild("iallreadytriedtoblockyoassbitch"):Destroy()
+            else    
+            
         local reqwepfromman = require(v.Parent.Parent.stat).S1
         
         if reqwepfromman.blockBreak == 4 then
             
-        else   
+        else
             
         if v.Parent.Parent.Parent:IsA("Model") and v.Parent.Parent.Parent.Humanoid then
             if v.Parent.Parent.Parent.Name == game.Players.LocalPlayer.Character.Name then
@@ -242,12 +263,14 @@ local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
 keypress(0x51)  
-task.wait()
+local a = Instance.new("BoolValue",v)
+a.Name = "iallreadytriedtoblockyoassbitch"
+task.wait(1.4)
 keyrelease(0x51)
-task.wait(1.5)
 else
 
 end    
+end
 end
 end
 end
