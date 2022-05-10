@@ -108,24 +108,46 @@ pcall(function()
             weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
         end    
         
-        if weapon3.values.canAttack.Value == false then
+        if weapon3.values.canAttack.Value == true then
+            
+        local fucker = math.random(1,2)
         
-        else    
+        if fucker == 1 then
         
-        
-wait(0.01)        
 local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
-task.wait(0.2)
-    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
-        task.wait(_G.ragehittime)
-    else
-        task.wait(_G.ragemisstime)
+for i,v in pairs(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):GetDescendants()) do
+    if v.Name == "B1" then
+		local animation = Instance.new("Animation")
+		animation.AnimationId = v.AnimationId
+		animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
+		animTrack:Play()
+		task.wait(0.2)
+		animTrack:Destroy()
+		local animation2 = Instance.new("Animation")
+		animation2.AnimationId = v.Parent.B2.AnimationId
+		animTrack2 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation2)
+		animTrack2:Play()
+		task.wait(0.5)
+		animTrack2:Stop()
     end
 end
+task.wait(0.2)
+    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
+        task.wait(1.6)
+    else
+        task.wait(0.5)
+    end
+else
+    
+task.wait(0.5)    
+
+
 end    
+end   
+end
 end
 end
 end
@@ -180,28 +202,41 @@ pcall(function()
             weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
         end    
         
-        if weapon3.values.canAttack.Value == false then
+        if weapon3.values.canAttack.Value == true then
         
-        else    
-        
-        
-wait(0.01)        
 local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
-keypress(0x51)  
-task.wait(0.2)
-
-    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
-        keyrelease(0x51)
-        task.wait(_G.kindalegithittime)
-    else
-        keyrelease(0x51)
-        task.wait(_G.kindalegitmisstime)
+for i,v in pairs(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):GetDescendants()) do
+    if v.Name == "B1" then
+		local animation = Instance.new("Animation")
+		animation.AnimationId = v.AnimationId
+		animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
+		animTrack:Play()
+		task.wait(0.2)
+		animTrack:Destroy()
+		local animation2 = Instance.new("Animation")
+		animation2.AnimationId = v.Parent.B2.AnimationId
+		animTrack2 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation2)
+		animTrack2:Play()
+		task.wait(0.5)
+		animTrack2:Stop()
     end
 end
-end    
+task.wait(0.2)
+    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
+        task.wait(1.6)
+    else
+        task.wait(0.5)
+    end
+else
+    
+task.wait(0.5)    
+
+
+end   
+end
 end
 end
 end
@@ -256,32 +291,44 @@ pcall(function()
             weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
         end    
         
-        if weapon3.values.canAttack.Value == false then
-        
-        else    
+        if weapon3.values.canAttack.Value == true then
             
         local fucker = math.random(1,2)
         
         if fucker == 1 then
         
-wait(0.01)        
 local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
-keypress(0x51)  
+for i,v in pairs(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):GetDescendants()) do
+    if v.Name == "B1" then
+		local animation = Instance.new("Animation")
+		animation.AnimationId = v.AnimationId
+		animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
+		animTrack:Play()
+		task.wait(0.2)
+		animTrack:Destroy()
+		local animation2 = Instance.new("Animation")
+		animation2.AnimationId = v.Parent.B2.AnimationId
+		animTrack2 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation2)
+		animTrack2:Play()
+		task.wait(0.5)
+		animTrack2:Stop()
+    end
+end
 task.wait(0.2)
     if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
-        keyrelease(0x51)
-        task.wait(_G.legithittime)
+        task.wait(1.6)
     else
-        keyrelease(0x51)
-        task.wait(_G.legitmisstime)
+        task.wait(0.5)
     end
 else
+    
+task.wait(0.5)    
 
 end    
-end    
+end   
 end
 end
 end
@@ -849,52 +896,4 @@ b:Button("List Of Items",function()
     notif("Press F9 To Check Console (Where The Items Were Printed Out)")
 end)    
 
-v:Slider("RageMode Miss Time",{
-    min = 0.50;
-    max = 1;
-    precise = true;
-},function(value)
-    _G.ragemisstime = value
-end)
-
-v:Slider("RageMode Hit Time",{
-    min = 1.3;
-    max = 2;
-    precise = true;
-},function(value)
-    _G.ragehittime = value
-end)
-
-v:Slider("Kinda-Legit Miss Time",{
-    min = 0.50;
-    max = 1;
-    precise = true;
-},function(value)
-    _G.kindalegitmisstime = value
-end)
-
-v:Slider("Kinda-Legit Hit Time",{
-    min = 1.3;
-    max = 2;
-    precise = true;
-},function(value)
-    _G.kindalegithittime = value
-end)
-
-v:Slider("Legit Miss Time",{
-    min = 0.50;
-    max = 1;
-    precise = true;
-},function(value)
-    _G.legitmisstime = value
-end)
-
-v:Slider("Legit Hit Time",{
-    min = 1.3;
-    max = 2;
-    precise = true;
-},function(value)
-    _G.legithittime = value
-end)
-
-notif("Added Parry Config Tab, Reworked Auto Parry (Should work atleast 35% better now), Auto Respawn")
+notif("Reworked Auto Parry (Should work atleast 25% better now also fake blocks (didnt test if they are FE)), Auto Respawn")
