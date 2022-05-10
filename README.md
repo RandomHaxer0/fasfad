@@ -53,10 +53,9 @@ function notif(text)
     })
 end
 
-local w = library:CreateWindow("Madness combat game idfk haha poo") -- Creates the window
+local w = library:CreateWindow("Madness combat game") -- Creates the window
 
 local b = w:CreateFolder("Main")
-local v = w:CreateFolder("Parry Config")
 
 b:Label("",{
     TextSize = 25; -- Self Explaining
@@ -118,32 +117,8 @@ local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
-for i,v in pairs(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):GetDescendants()) do
-    if v.Name == "B1" then
-		local animation = Instance.new("Animation")
-		animation.AnimationId = v.AnimationId
-		animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
-		animTrack:Play()
-		task.wait(0.2)
-		animTrack:Destroy()
-		local animation2 = Instance.new("Animation")
-		animation2.AnimationId = v.Parent.B2.AnimationId
-		animTrack2 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation2)
-		animTrack2:Play()
-		task.wait(0.5)
-		animTrack2:Stop()
-    end
-end
-task.wait(0.2)
-    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
-        task.wait(1.6)
-    else
-        task.wait(0.5)
-    end
-else
-    
-task.wait(0.5)    
 
+task.wait(1.5)   
 
 end    
 end   
@@ -208,32 +183,11 @@ local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
-for i,v in pairs(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):GetDescendants()) do
-    if v.Name == "B1" then
-		local animation = Instance.new("Animation")
-		animation.AnimationId = v.AnimationId
-		animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
-		animTrack:Play()
-		task.wait(0.2)
-		animTrack:Destroy()
-		local animation2 = Instance.new("Animation")
-		animation2.AnimationId = v.Parent.B2.AnimationId
-		animTrack2 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation2)
-		animTrack2:Play()
-		task.wait(0.5)
-		animTrack2:Stop()
-    end
-end
-task.wait(0.2)
-    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
-        task.wait(1.6)
-    else
-        task.wait(0.5)
-    end
-else
-    
-task.wait(0.5)    
+keypress(0x51)
+task.wait()
+keyrelease(0x51)
 
+task.wait(1.5)   
 
 end   
 end
@@ -301,35 +255,15 @@ local ohString1 = "Block"
 local ohBoolean2 = true
 
 weapon3.Start:FireServer(ohString1, ohBoolean2)
-for i,v in pairs(game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):GetDescendants()) do
-    if v.Name == "B1" then
-		local animation = Instance.new("Animation")
-		animation.AnimationId = v.AnimationId
-		animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
-		animTrack:Play()
-		task.wait(0.2)
-		animTrack:Destroy()
-		local animation2 = Instance.new("Animation")
-		animation2.AnimationId = v.Parent.B2.AnimationId
-		animTrack2 = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation2)
-		animTrack2:Play()
-		task.wait(0.5)
-		animTrack2:Stop()
-    end
-end
-task.wait(0.2)
-    if weapon3:FindFirstChild("shovelHandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("baseballBat"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("longhandle"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("snailshield"):FindFirstChild("blockSpark") or weapon3:FindFirstChild("katanaHandle"):FindFirstChild("blockSpark") then
-        task.wait(1.6)
-    else
-        task.wait(0.5)
-    end
-else
-    
-task.wait(0.5)    
+keypress(0x51)
+task.wait()
+keyrelease(0x51)
 
+task.wait(1.5)
+
+end
 end    
 end   
-end
 end
 end
 end
@@ -894,6 +828,6 @@ b:Button("List Of Items",function()
     s("")
     s("There are more but im not sure what their name is since i never got to see their atcual name")
     notif("Press F9 To Check Console (Where The Items Were Printed Out)")
-end)    
+end) 
 
-notif("Reworked Auto Parry (Should work atleast 25% better now also fake blocks (didnt test if they are FE)), Auto Respawn")
+notif("Reworked Auto Parry (Should work atleast 15% better now also fake blocks (didnt test if they are FE)), Auto Respawn")
