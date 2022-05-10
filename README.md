@@ -1,46 +1,9 @@
---[[ 
-
-THIS IS REALLY IMPORTANT IF YOU ARE GONNA USE SALVAGE ALL EXCEPT
-If you type in e.g bat its gonna salvage everything because that item doesn't exist.
-
-this is a list of items you can use
-
-e.g putting in fists would salvage everything except ur hands
-
-now heres the list of items
-
-CAPITALS MATTER
-
-fists
-baseballBat
-crowbar
-yoyo
-longsword
-fireAxe
-fryingPan
-rapier
-knife
-cleaver
-armingsword
-greatsword
-chainsaw
-spear
-shovel
-metalBat
-sledgehammer
-
-There are more but im not sure what their name is since i never got to see their atcual name
-
---]]
-
 local weapontable = {"fists","baseballBat","knife","shovel","fryingPan","cleaver","fireAxe","armingsword","crowbar","spear","katana","longsword","rapier","yoyo","pencil","metalBat","sledgehammer","chainsaw","greatsword"}
 local equiptable = {"fists","baseballBat","knife","shovel","fryingPan","cleaver","fireAxe","armingsword","crowbar","spear","katana","longsword","rapier","yoyo","pencil"}
 
 spawn(function()
 local msg = Instance.new("Message",workspace)
-msg.Text = "Please Read the First 32 lines of the script tyty"
-task.wait(6)
-msg.Text = "Also No Miss Doesn't Work With All Weps (Doesn't Work With Any Of The Upgraded Weapons, Chainsaw, GreatSword, Fists, Rapier And Yoyo)"
+msg.Text = "No Miss Doesn't Work With All Weps (Doesn't Work With Any Of The Upgraded Weapons, Chainsaw, GreatSword, Fists, Rapier And Yoyo Cuz Im A Lazy Fuck Haha!)"
 task.wait(10)
 msg:Destroy()
 end)
@@ -69,19 +32,19 @@ b:Label("",{
 
 b:Toggle("RageMode Auto-Parry",function(bool)
      spawn(function()
-        if bool3 then
-            _G.ragemodeautoparry = true
+        if bool then
+            _G.rageautoparry = true
             notif("RageMode Auto-Parry On")
         else
-            _G.ragemodeautoparry = false
+            _G.rageautoparry = false
             notif("RageMode Auto-Parry Off")
         end
 
-while _G.ragemodeautoparry do task.wait()
+while _G.rageautoparry do task.wait()
 pcall(function()
     for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
         
-        local weapon3 = nil
+        local weapon1 = nil
         
         if v.Name == "canAttack" and v.Value == false then
             
@@ -107,25 +70,20 @@ pcall(function()
                   if mag < 13  then
                       
         if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
-            weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+            weapon1 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
         end    
         
-        if weapon3.values.canAttack.Value == true then
+        if weapon1.values.canAttack.Value == true then
             
-        local fucker = math.random(1,2)
-        
-        if fucker == 1 then
-        
 local ohString1 = "Block"
 local ohBoolean2 = true
 
-weapon3.Start:FireServer(ohString1, ohBoolean2)
+weapon1.Start:FireServer(ohString1, ohBoolean2)
 
-task.wait(1.5)   
+task.wait(1.5)
 
 end    
 end   
-end
 end
 end
 end
@@ -139,19 +97,19 @@ end)
 
 b:Toggle("Kinda-Legit Auto-Parry",function(bool2)
      spawn(function()
-        if bool3 then
+        if bool2 then
             _G.kindalegitautoparry = true
-            notif("Kinda-Legit Auto-Parry On")
+            notif("Kinda Legit Auto-Parry On")
         else
             _G.kindalegitautoparry = false
-            notif("Kinda-Legit Auto-Parry Off")
+            notif("Kinda Legit Auto-Parry Off")
         end
 
 while _G.kindalegitautoparry do task.wait()
 pcall(function()
     for i,v in pairs(game:GetService("Workspace").characters:GetDescendants()) do 
         
-        local weapon3 = nil
+        local weapon2 = nil
         
         if v.Name == "canAttack" and v.Value == false then
             
@@ -177,23 +135,23 @@ pcall(function()
                   if mag < 13  then
                       
         if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then
-            weapon3 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
+            weapon2 = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool")
         end    
         
-        if weapon3.values.canAttack.Value == true then
-        
+        if weapon2.values.canAttack.Value == true then
+            
 local ohString1 = "Block"
 local ohBoolean2 = true
 
-weapon3.Start:FireServer(ohString1, ohBoolean2)
+weapon2.Start:FireServer(ohString1, ohBoolean2)
 keypress(0x51)
 task.wait()
 keyrelease(0x51)
 
-task.wait(1.5)   
+task.wait(1.5)
 
+end    
 end   
-end
 end
 end
 end
@@ -752,6 +710,15 @@ end)
 end)
 
 b:Box("Equip Weapon","string",function(string500)
+    spawn(function()
+    if not _G.firsttimer23 then
+        local fia = Instance.new("Message",workspace)
+        fia.Text = "Make sure you run this on death screen or menu or inventory menu"
+        task.wait(5)
+        fia:Destroy()
+        _G.firsttimer23 = true
+    end
+    end)
     
     if string500 == "" then
     
@@ -791,7 +758,7 @@ b:Button("Item List(Equip)",function()
     notif("Press F9 To Check Console (Where The Items Were Printed Out)")
 end) 
 
-b:Box("Salvage All Except","string",function(item)
+b:Box("Scrap All Except","string",function(item)
     
     if item == "" then 
     
@@ -846,13 +813,55 @@ end
 end
 end)
 
-b:Button("Item List(Salvage)",function()
+b:Button("Scrap All Except Main",function()
+
+    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("Tool") then
+            v.Parent = game.Players.LocalPlayer.Backpack
+        end
+    end
+    
+    task.wait(0.1)
+
+    local realpos = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        if v:IsA("Tool") then
+        if v.Name == ""..game:GetService("Players").LocalPlayer.playerData.equipment.melee.Value.."" then
+        
+        else
+
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11.6017, 101.75, -58.0946)
+task.wait(0.2)
+local ohString1 = ""..v.Name..""
+local ohString2 = "Salvage"
+local ohInstance3 = workspace.map.workbench.workbenchMain
+
+game:GetService("ReplicatedStorage").events.purchaseRequest:FireServer(ohString1, ohString2, ohInstance3)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(302.946, 81.7, 202.482)
+task.wait(0.2)
+local ohString1 = ""..v.Name..""
+local ohString2 = "Salvage"
+local ohInstance3 = workspace.map.workbench.workbenchMain
+
+game:GetService("ReplicatedStorage").events.purchaseRequest:FireServer(ohString1, ohString2, ohInstance3)
+
+end
+end
+end
+task.wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(realpos)
+game:GetService("Workspace").map.workbench2.Name = "workbench"
+end)
+
+b:Button("Item List(Scrap)",function()
     function s(word)
         print(word)
     end
     
     s("Capitals Matter")
-    s("Salvage Item list")
+    s("Scrap Item list")
     s("")
     s("")
     for i,v in pairs(weapontable) do
@@ -866,7 +875,7 @@ end)
 
 b:Button("HitBox Expander",function()
     if _G.allreadyhitbox then
-    
+        notif("Allready executed press the insert button if u accidently hid the ui.")
     else
         _G.allreadyhitbox = true
         loadstring(game:HttpGet("http://gameovers.net/Scripts/Free/HitboxExpander/main.lua", true))()
