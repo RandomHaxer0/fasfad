@@ -830,4 +830,4 @@ b:Button("List Of Items",function()
     notif("Press F9 To Check Console (Where The Items Were Printed Out)")
 end) 
 
-notif("Reworked Auto Parry (Should work atleast 15% better now also fake blocks (didnt test if they are FE)), Auto Respawn")
+notif("Tried reworking auto parry and failed 😥😥😥😥😥, Auto Respawn")
