@@ -33,6 +33,9 @@ There are more but im not sure what their name is since i never got to see their
 
 --]]
 
+local weapontable = {"fists","baseballBat","knife","shovel","fryingPan","cleaver","fireAxe","armingsword","crowbar","spear","katana","longsword","rapier","yoyo","pencil","metalBat","sledgehammer","chainsaw","greatsword"}
+local equiptable = {"fists","baseballBat","knife","shovel","fryingPan","cleaver","fireAxe","armingsword","crowbar","spear","katana","longsword","rapier","yoyo","pencil"}
+
 spawn(function()
 local msg = Instance.new("Message",workspace)
 msg.Text = "Please Read the First 32 lines of the script tyty"
@@ -748,13 +751,55 @@ end
 end)
 end)
 
+b:Box("Equip Weapon","string",function(string500)
+    
+    if string500 == "" then
+    
+    else
+        
+    for i,v in pairs(equiptable) do
+        if string500 == v then
+            local ohString1 = ""..string500..""
+            local ohString2 = "Equip"
+            
+            game:GetService("ReplicatedStorage").events.purchaseRequest:FireServer(ohString1, ohString2)
+        else
+
+        end
+    end
+    
+    notif("If the item exists or unlocked then you will get it on respawn.")
+    
+end
+
+end)
+
+b:Button("Item List(Equip)",function()
+    function s(word)
+        print(word)
+    end
+    
+    s("Capitals Matter")
+    s("Equip Item List")
+    s("")
+    s("")
+    for i,v in pairs(equiptable) do
+        print(i,v)
+    end    
+    s("")
+    s("")
+    notif("Press F9 To Check Console (Where The Items Were Printed Out)")
+end) 
+
 b:Box("Salvage All Except","string",function(item)
     
     if item == "" then 
     
     else    
     
-    if item == "sledgehammer" or item == "metalBat" or item == "baseballBat" or item == "fireAxe" or item == "greatsword" or item == "chainsaw" or item == "spear" or item == "cleaver" or item == "fryingPan" or item == "armingsword" or item == "fists" or item == "rapier" or item == "knife" or item == "crowbar" or item == "yoyo" or item == "shovel" or item == "longsword" then
+    for i,v in pairs(weapontable) do
+    
+    if item == v then
 
     for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
         if v:IsA("Tool") then
@@ -798,36 +843,34 @@ else
 
 end    
 end
+end
 end)
 
-b:Button("List Of Items",function()
+b:Button("Item List(Salvage)",function()
     function s(word)
         print(word)
     end
     
     s("Capitals Matter")
+    s("Salvage Item list")
     s("")
     s("")
-    s("baseballBat")
-    s("fists")
-    s("shovel")
-    s("rapier")
-    s("longsword")
-    s("greatsword")
-    s("chainsaw")
-    s("knife")
-    s("fryingPan")
-    s("armingsword")
-    s("spear")
-    s("yoyo")
-    s("cleaver")
-    s("crowbar")
-    s("metalBat")
-    s("sledgehammer")
+    for i,v in pairs(weapontable) do
+        print(i,v)
+    end
     s("")
     s("")
     s("There are more but im not sure what their name is since i never got to see their atcual name")
     notif("Press F9 To Check Console (Where The Items Were Printed Out)")
 end) 
 
-notif("Tried reworking auto parry and failed 😥😥😥😥😥, Auto Respawn")
+b:Button("HitBox Expander",function()
+    if _G.allreadyhitbox then
+    
+    else
+        _G.allreadyhitbox = true
+        loadstring(game:HttpGet("http://gameovers.net/Scripts/Free/HitboxExpander/main.lua", true))()
+    end
+end)    
+
+notif("Auto Respawn, Equip Item, Item List(Equip), HitBox Expander (not mine i forgor who made it, works 50% ig)")
