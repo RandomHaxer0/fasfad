@@ -80,7 +80,7 @@ local ohBoolean2 = true
 
 weapon1.Start:FireServer(ohString1, ohBoolean2)
 
-task.wait(1.5)
+task.wait(1.4)
 
 end    
 end   
@@ -148,7 +148,7 @@ keypress(0x51)
 task.wait()
 keyrelease(0x51)
 
-task.wait(1.5)
+task.wait(1.4)
 
 end    
 end   
@@ -220,7 +220,7 @@ keypress(0x51)
 task.wait()
 keyrelease(0x51)
 
-task.wait(1.5)
+task.wait(1.4)
 
 end
 end    
@@ -273,6 +273,18 @@ b:Toggle("Anti Stamina Usage",function(bool4)
         else
             _G.modification = false
             notif("Anti Stamina Usage Off")
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+            if v:IsA("Tool") then
+    
+                local req = require(v.stat)
+    
+                for i,v in next, req do
+                    req.staminaUsage = 5
+                    req.blockDefense = 4
+                end
+                
+            end
+        end
         end
         
 while _G.modification do task.wait(0.1)
@@ -285,7 +297,7 @@ pcall(function()
     
                 for i,v in next, req do
                     req.staminaUsage = -9e9
-                    req.blockDefense = 9e9
+                    req.blockDefense = 4
                 end
                 
             end
@@ -304,6 +316,68 @@ b:Toggle("Anti Slow",function(bool7)
         else
             _G.antislow = false
             notif("Anti Slow Off")
+             for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+            if v:IsA("Tool") then
+                
+                if require(v.stat).S1 then
+                    _G.S1ex = true
+                else
+                    _G.S1ex = false
+                end    
+                
+                if require(v.stat).S2 then
+                    _G.S2ex = true
+                else
+                    _G.S2ex = false
+                end    
+                
+                if require(v.stat).S3 then
+                    _G.S3ex = true
+                else
+                    _G.S3ex = false
+                end    
+                
+                if _G.S1ex then
+                    
+                local req = require(v.stat)
+                
+                for i,v in next, req do
+                    req.bSlowdown = 0.5
+                end
+    
+                local req2 = require(v.stat).S1
+    
+                for i,v in next, req2 do
+                    req2.slowdown = 0.1
+                    req2.hardSlow = false
+                end
+                
+                end
+                
+                if _G.S2ex then
+                    
+                local req3 = require(v.stat).S2
+    
+                for i,v in next, req3 do
+                    req3.slowdown = 0.1
+                    req3.hardSlow = false
+                end
+                
+                end
+                
+                if _G.S3ex then
+                    
+                local req4 = require(v.stat).S2
+    
+                for i,v in next, req4 do
+                    req4.slowdown = 0.1
+                    req4.hardSlow = false
+                end
+                
+                end    
+                
+            end
+        end
         end
         
 while _G.antislow do task.wait(0.1)
@@ -330,31 +404,40 @@ while _G.antislow do task.wait(0.1)
                 end    
                 
                 if _G.S1ex then
-    
-                local req = require(v.stat).S1
-    
+                    
+                local req = require(v.stat)
+                
                 for i,v in next, req do
-                    req.slowdown = 0
+                    req.bSlowdown = 0
+                end
+    
+                local req2 = require(v.stat).S1
+    
+                for i,v in next, req2 do
+                    req2.slowdown = 0
+                    req2.hardSlow = false
                 end
                 
                 end
                 
                 if _G.S2ex then
                     
-                local req = require(v.stat).S2
+                local req3 = require(v.stat).S2
     
-                for i,v in next, req do
-                    req.slowdown = 0
+                for i,v in next, req3 do
+                    req3.slowdown = 0
+                    req3.hardSlow = false
                 end
                 
                 end
                 
                 if _G.S3ex then
                     
-                local req = require(v.stat).S2
+                local req4 = require(v.stat).S2
     
-                for i,v in next, req do
-                    req.slowdown = 0
+                for i,v in next, req4 do
+                    req4.slowdown = 0
+                    req4.hardSlow = false
                 end
                 
                 end    
@@ -880,6 +963,6 @@ b:Button("HitBox Expander",function()
         _G.allreadyhitbox = true
         loadstring(game:HttpGet("http://gameovers.net/Scripts/Free/HitboxExpander/main.lua", true))()
     end
-end)    
-
+end)  
+        
 notif("Auto Respawn, Equip Item, Item List(Equip), HitBox Expander (not mine i forgor who made it, works 50% ig)")
